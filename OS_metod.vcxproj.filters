@@ -42,6 +42,8 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram21.cd" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OS_metod.rc">

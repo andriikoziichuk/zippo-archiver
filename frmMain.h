@@ -1,44 +1,23 @@
 #pragma once
 
 #include <regex>
-#include <ctime>
-#include <string>
-#include <fstream>
-#include <iostream>
-#include <filesystem>
 #include "frmAbout.h"
 
 namespace OSmetod {
 
-	using namespace System;
 	using namespace Ionic::Zip;
 	using namespace System::IO;
-	using namespace System::IO::Compression;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
 
-	/// <summary>
-	/// Summary for frmMain
-	/// </summary>
 	public ref class frmMain : public System::Windows::Forms::Form
 	{
 	public:
 		frmMain(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 			frmabout = gcnew frmAbout();
 		}
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
 		~frmMain()
 		{
 			if (components)
@@ -55,9 +34,6 @@ namespace OSmetod {
 
 	protected:
 
-
-
-
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ tsmiClose;
 	private: System::Windows::Forms::ToolStripMenuItem^ tsmiProcess;
@@ -65,28 +41,14 @@ namespace OSmetod {
 	private: System::Windows::Forms::ToolStripMenuItem^ tsmiStop;
 	private: System::Windows::Forms::ToolStripMenuItem^ tmsiParams;
 
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::ToolStrip^ tsMain;
 	private: System::Windows::Forms::ToolStripButton^ tsbNew;
 	private: System::Windows::Forms::ToolStripButton^ tsbOpen;
 	private: System::Windows::Forms::ToolStripButton^ tsbSave;
 
-
-
-
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator1;
 	private: System::Windows::Forms::ToolStripButton^ tsbExecute;
 	private: System::Windows::Forms::ToolStripButton^ tsbCancel;
-
 
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator2;
 	private: System::Windows::Forms::ToolStripButton^ tsbAbout;
@@ -96,8 +58,6 @@ namespace OSmetod {
 	private: System::Windows::Forms::ToolStripStatusLabel^ tslInfo;
 	private: System::Windows::Forms::ToolStripProgressBar^ tspMain;
 
-
-
 	private: System::Windows::Forms::SplitContainer^ scMain;
 
 	private: System::Windows::Forms::Panel^ pnlview;
@@ -106,16 +66,11 @@ namespace OSmetod {
 	private: System::Windows::Forms::Panel^ pnlInfo;
 	private: System::Windows::Forms::TextBox^ txbInfo;
 
-
-
-
 	private: System::Windows::Forms::Label^ lblInfo;
 
 	private: System::Windows::Forms::SplitContainer^ scView;
 	private: System::Windows::Forms::TreeView^ tvMain;
 	private: System::Windows::Forms::ListView^ lvMain;
-
-
 
 	private: System::Windows::Forms::ColumnHeader^ col1;
 	private: System::Windows::Forms::ColumnHeader^ col2;
@@ -134,7 +89,6 @@ namespace OSmetod {
 	private: System::Windows::Forms::ToolStrip^ toolStrip1;
 	private: System::Windows::Forms::ToolStripButton^ toolStripButton1;
 
-
 	private: System::Windows::Forms::ToolStripMenuItem^ openToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ saveAssToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator3;
@@ -149,44 +103,22 @@ namespace OSmetod {
 	private: System::Windows::Forms::FolderBrowserDialog^ folderBrowserDialog1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 
+	private: System::Windows::Forms::Label^ label2;
 
-
-
-private: System::Windows::Forms::Label^ label2;
-
-
-
-
-private: System::Windows::Forms::PictureBox^ pictureBox1;
-private: System::Windows::Forms::Label^ label3;
-private: System::Windows::Forms::ToolStripMenuItem^ extractToolStripMenuItem;
-private: System::Windows::Forms::ToolStripButton^ toolStripButton3;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ FileName;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ FileType;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ LastUpdated;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ FileSize;
-private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
-
-
-
-
-
-
-
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::ToolStripMenuItem^ extractToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripButton^ toolStripButton3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ FileName;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ FileType;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ LastUpdated;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ FileSize;
+	private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-
-
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(frmMain::typeid));
@@ -249,7 +181,6 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(46, 24);
 			this->fileToolStripMenuItem->Text = L"File";
-			this->fileToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmMain::fileToolStripMenuItem_Click);
 			// 
 			// openToolStripMenuItem
 			// 
@@ -313,7 +244,6 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
 			this->toolStripStatusLabel1->Size = System::Drawing::Size(47, 20);
 			this->toolStripStatusLabel1->Text = L"status";
-			this->toolStripStatusLabel1->Click += gcnew System::EventHandler(this, &frmMain::toolStripStatusLabel1_Click);
 			// 
 			// toolStrip1
 			// 
@@ -379,7 +309,6 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			this->Zippo->Size = System::Drawing::Size(120, 46);
 			this->Zippo->TabIndex = 5;
 			this->Zippo->Text = L"Zippo";
-			this->Zippo->Click += gcnew System::EventHandler(this, &frmMain::label1_Click);
 			// 
 			// label1
 			// 
@@ -406,7 +335,6 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->dataGridView1->Size = System::Drawing::Size(810, 592);
 			this->dataGridView1->TabIndex = 8;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &frmMain::dataGridView1_CellContentClick);
 			// 
 			// FileName
 			// 
@@ -452,7 +380,6 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			this->label2->Size = System::Drawing::Size(43, 20);
 			this->label2->TabIndex = 9;
 			this->label2->Text = L"Path";
-			this->label2->Click += gcnew System::EventHandler(this, &frmMain::label2_Click);
 			// 
 			// pictureBox1
 			// 
@@ -474,7 +401,6 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			this->label3->Size = System::Drawing::Size(177, 16);
 			this->label3->TabIndex = 11;
 			this->label3->Text = L"DONATE TO THE ARMY";
-			this->label3->Click += gcnew System::EventHandler(this, &frmMain::label3_Click);
 			// 
 			// openFileDialog2
 			// 
@@ -498,7 +424,6 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"frmMain";
-			this->Load += gcnew System::EventHandler(this, &frmMain::frmMain_Load_1);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->statusStrip1->ResumeLayout(false);
@@ -530,19 +455,11 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 	private: System::Void tsbInfo_Click(System::Object^ sender, System::EventArgs^ e) {
 		MessageBox::Show("Information");
 	}
-	private: System::Void frmMain_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void tsmiFile_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void toolStripStatusLabel1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
 	private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->toolStripButton1_Click(sender, e);
 	}
 	private: System::Void closeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();
-	}
-	private: System::Void fileToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void toolStripButton1_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (folderBrowserDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
@@ -570,44 +487,95 @@ private: System::Windows::Forms::OpenFileDialog^ openFileDialog2;
 			dataGridView1->Rows->Add(newRow);
 		}
 	}
-	private: System::Void frmMain_Load_1(System::Object^ sender, System::EventArgs^ e) {
-
+	private: System::Void aboutToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
+		frmabout->ShowDialog();
 	}
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void aboutToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
-	frmabout->ShowDialog();
-}
-private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-
-}
-private: System::Void toolStripButton2_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (dataGridView1->SelectedRows != nullptr) {
-		DataGridViewRow^ selectedRow = dataGridView1->SelectedRows[0];
-		String^ selectedPath = Path::Combine(folderBrowserDialog1->SelectedPath, selectedRow->Cells[0]->Value->ToString());
+	private: System::Void toolStripButton2_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (dataGridView1->SelectedRows != nullptr) {
+			DataGridViewRow^ selectedRow = dataGridView1->SelectedRows[0];
+			String^ selectedPath = Path::Combine(folderBrowserDialog1->SelectedPath, selectedRow->Cells[0]->Value->ToString());
 		
-		if (String::IsNullOrEmpty(selectedPath) || String::IsNullOrWhiteSpace(selectedPath)) {
-			label2->Text = "Select a folder to archive";
-			return;
+			if (String::IsNullOrEmpty(selectedPath) || String::IsNullOrWhiteSpace(selectedPath)) {
+				label2->Text = "Select a folder to archive";
+				return;
+			}
+			DirectoryInfo^ dir = gcnew DirectoryInfo(selectedPath);
+			std::string path = ConvertSystemStringToStdString(dir->GetFileSystemInfos()[0]->FullName);
+
+			String^ folderPath = ExtractDirectoryPath(path);
+			String^ zipName = ExtractZipName(ConvertSystemStringToStdString(selectedRow->Cells[0]->Value->ToString()));
+
+			if (System::IO::Directory::Exists(folderPath))
+			{
+				String^ zipFilePath = folderPath->Remove(folderPath->Length - 1) + "_" + zipName + ".zip";
+
+				try
+				{
+					this->archiveFolder(folderPath, zipFilePath);
+					this->reloadMainGrid(dir);
+				}
+				catch (Exception^ ex)
+				{
+					Console::WriteLine("Error creating archive: " + ex->Message);
+				}
+			}
+			else
+			{
+				Console::WriteLine("Folder does not exist: " + folderPath);
+			}
 		}
-		DirectoryInfo^ dir = gcnew DirectoryInfo(selectedPath);
-		std::string path = ConvertSystemStringToStdString(dir->GetFileSystemInfos()[0]->FullName);
-
-		String^ folderPath = ExtractDirectoryPath(path);
-		String^ zipName = ExtractZipName(ConvertSystemStringToStdString(selectedRow->Cells[0]->Value->ToString()));
-
-		if (System::IO::Directory::Exists(folderPath))
+		else {
+			System::Console::WriteLine("Nothing to archive!");
+		}
+	}
+	private: System::Void saveAssToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (folderBrowserDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 		{
-			String^ zipFilePath = folderPath->Remove(folderPath->Length - 1) + "_" + zipName + ".zip";
+			String^ folderPath = folderBrowserDialog1->SelectedPath;
+			String^ zipName = System::IO::Path::GetFileNameWithoutExtension(System::IO::Path::GetTempFileName());
+			DirectoryInfo^ dir = gcnew DirectoryInfo(folderPath);
+			if (System::IO::Directory::Exists(folderPath))
+			{
+				String^ zipFilePath = folderPath->Remove(folderPath->Length - 1) + "_" + zipName + ".zip";
+				Console::WriteLine("zipFilePath: " + zipFilePath);
+
+				try
+				{
+					this->archiveFolder(folderPath, zipFilePath);
+					this->reloadMainGrid(dir);
+				}
+				catch (Exception^ ex)
+				{
+					Console::WriteLine("Error creating archive: " + ex->Message);
+				}
+			}
+			else
+			{
+				Console::WriteLine("Folder does not exist: " + folderPath);
+			}
+		}
+	}
+	private: System::Void toolStripButton3_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (dataGridView1->SelectedRows != nullptr) {
+			DataGridViewRow^ selectedRows = dataGridView1->SelectedRows[0];
+
+			String^ selectedPath = Path::Combine(folderBrowserDialog1->SelectedPath, selectedRows->Cells[0]->Value->ToString());
+			DirectoryInfo^ dir = gcnew DirectoryInfo(folderBrowserDialog1->SelectedPath);
+			if (selectedRows->Cells[0]->Value == nullptr) {
+				return;
+			}
+			if (String::IsNullOrEmpty(selectedPath) || String::IsNullOrWhiteSpace(selectedPath)) {
+				label2->Text = "Select an archive to extract";
+				return;
+			}
+			if (Path::GetExtension(selectedRows->Cells[1]->Value->ToString()) != ".zip") {
+				Console::WriteLine("is not a zip file");
+				return;
+			}
 
 			try
 			{
-				this->archiveFolder(folderPath, zipFilePath);
+				this->extractFiles(selectedPath);
 				this->reloadMainGrid(dir);
 			}
 			catch (Exception^ ex)
@@ -615,29 +583,18 @@ private: System::Void toolStripButton2_Click(System::Object^ sender, System::Eve
 				Console::WriteLine("Error creating archive: " + ex->Message);
 			}
 		}
-		else
-		{
-			Console::WriteLine("Folder does not exist: " + folderPath);
+		else {
+			System::Console::WriteLine("Nothing to archive!");
 		}
 	}
-	else {
-		System::Console::WriteLine("Nothing to archive!");
-	}
-}
-private: System::Void saveAssToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (folderBrowserDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-	{
-		String^ folderPath = folderBrowserDialog1->SelectedPath;
-		String^ zipName = System::IO::Path::GetFileNameWithoutExtension(System::IO::Path::GetTempFileName());
-		DirectoryInfo^ dir = gcnew DirectoryInfo(folderPath);
-		if (System::IO::Directory::Exists(folderPath))
+	private: System::Void extractToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (openFileDialog2->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 		{
-			String^ zipFilePath = folderPath->Remove(folderPath->Length - 1) + "_" + zipName + ".zip";
-			Console::WriteLine("zipFilePath: " + zipFilePath);
-
+			String^ selectedPath = openFileDialog2->FileName;
+			DirectoryInfo^ dir = gcnew DirectoryInfo(folderBrowserDialog1->SelectedPath);
 			try
 			{
-				this->archiveFolder(folderPath, zipFilePath);
+				this->extractFiles(selectedPath);
 				this->reloadMainGrid(dir);
 			}
 			catch (Exception^ ex)
@@ -645,99 +602,46 @@ private: System::Void saveAssToolStripMenuItem_Click(System::Object^ sender, Sys
 				Console::WriteLine("Error creating archive: " + ex->Message);
 			}
 		}
-		else
-		{
-			Console::WriteLine("Folder does not exist: " + folderPath);
-		}
 	}
-}
-private: System::Void toolStripButton3_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (dataGridView1->SelectedRows != nullptr) {
-		DataGridViewRow^ selectedRows = dataGridView1->SelectedRows[0];
+	private: System::Void archiveFolder(String^ folderPath, String^ zipName) {
+		ZipFile^ zip = gcnew ZipFile();
+		zip->AddDirectory(folderPath);
+		zip->Save(zipName);
 
-		String^ selectedPath = Path::Combine(folderBrowserDialog1->SelectedPath, selectedRows->Cells[0]->Value->ToString());
-		DirectoryInfo^ dir = gcnew DirectoryInfo(folderBrowserDialog1->SelectedPath);
-		if (selectedRows->Cells[0]->Value == nullptr) {
-			return;
-		}
-		if (String::IsNullOrEmpty(selectedPath) || String::IsNullOrWhiteSpace(selectedPath)) {
-			label2->Text = "Select an archive to extract";
-			return;
-		}
-		if (Path::GetExtension(selectedRows->Cells[1]->Value->ToString()) != ".zip") {
-			Console::WriteLine("is not a zip file");
-			return;
-		}
-
-		try
-		{
-			this->extractFiles(selectedPath);
-			this->reloadMainGrid(dir);
-		}
-		catch (Exception^ ex)
-		{
-			Console::WriteLine("Error creating archive: " + ex->Message);
-		}
+		Console::WriteLine("Archive created successfully at: " + zipName);
 	}
-	else {
-		System::Console::WriteLine("Nothing to archive!");
+	private: System::Void extractFiles(String^ path) {
+		std::string convertedPath = ConvertSystemStringToStdString(path);
+		ZipFile^ zip = ZipFile::Read(path);
+		String^ tempFileName = System::IO::Path::GetFileNameWithoutExtension(System::IO::Path::GetTempFileName());
+		zip->ExtractAll(System::IO::Path::Combine(ExtractDirectoryPath(convertedPath), ExtractZipName(convertedPath) + "_" + tempFileName));
 	}
-}
-private: System::Void extractToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (openFileDialog2->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+	private: String^ ExtractDirectoryPath(std::string& fullPath)
 	{
-		String^ selectedPath = openFileDialog2->FileName;
-		DirectoryInfo^ dir = gcnew DirectoryInfo(folderBrowserDialog1->SelectedPath);
-		try
-		{
-			this->extractFiles(selectedPath);
-			this->reloadMainGrid(dir);
-		}
-		catch (Exception^ ex)
-		{
-			Console::WriteLine("Error creating archive: " + ex->Message);
-		}
+		size_t lastBackslashPos = fullPath.find_last_of(L'\\');
+		if (lastBackslashPos == std::wstring::npos)
+			return L"";
+
+		return ConvertStdStringToSystemString(fullPath.substr(0, lastBackslashPos + 1));
 	}
-}
-private: System::Void archiveFolder(String^ folderPath, String^ zipName) {
-	ZipFile^ zip = gcnew ZipFile();
-	zip->AddDirectory(folderPath);
-	zip->Save(zipName);
+	private: String^ ExtractZipName(std::string& path)
+	{
+		String^ fullPath = ConvertStdStringToSystemString(path);
+		return System::IO::Path::GetFileNameWithoutExtension(fullPath);
+	}
+	private: System::String^ ConvertStdStringToSystemString(const std::string& nativeString)
+	{
+		return gcnew System::String(nativeString.c_str());
+	}
 
-	Console::WriteLine("Archive created successfully at: " + zipName);
-}
-private: System::Void extractFiles(String^ path) {
-	std::string convertedPath = ConvertSystemStringToStdString(path);
-	ZipFile^ zip = ZipFile::Read(path);
-	String^ tempFileName = System::IO::Path::GetFileNameWithoutExtension(System::IO::Path::GetTempFileName());
-	zip->ExtractAll(System::IO::Path::Combine(ExtractDirectoryPath(convertedPath), ExtractZipName(convertedPath) + "_" + tempFileName));
-}
-private: String^ ExtractDirectoryPath(std::string& fullPath)
-{
-	size_t lastBackslashPos = fullPath.find_last_of(L'\\');
-	if (lastBackslashPos == std::wstring::npos)
-		return L"";
+	private: std::string ConvertSystemStringToStdString(System::String^ managedString)
+	{
+		const wchar_t* nativeWChar = (const wchar_t*)(System::Runtime::InteropServices::Marshal::StringToHGlobalUni(managedString)).ToPointer();
+		std::wstring nativeWString(nativeWChar);
+		System::Runtime::InteropServices::Marshal::FreeHGlobal(System::IntPtr((void*)nativeWChar));
+		std::string nativeString(nativeWString.begin(), nativeWString.end());
 
-	return ConvertStdStringToSystemString(fullPath.substr(0, lastBackslashPos + 1));
-}
-private: String^ ExtractZipName(std::string& path)
-{
-	String^ fullPath = ConvertStdStringToSystemString(path);
-	return System::IO::Path::GetFileNameWithoutExtension(fullPath);
-}
-private: System::String^ ConvertStdStringToSystemString(const std::string& nativeString)
-{
-	return gcnew System::String(nativeString.c_str());
-}
-
-private: std::string ConvertSystemStringToStdString(System::String^ managedString)
-{
-	const wchar_t* nativeWChar = (const wchar_t*)(System::Runtime::InteropServices::Marshal::StringToHGlobalUni(managedString)).ToPointer();
-	std::wstring nativeWString(nativeWChar);
-	System::Runtime::InteropServices::Marshal::FreeHGlobal(System::IntPtr((void*)nativeWChar));
-	std::string nativeString(nativeWString.begin(), nativeWString.end());
-
-	return nativeString;
-}
+		return nativeString;
+	}
 };
 }
