@@ -7,9 +7,6 @@
 #include <iostream>
 #include <filesystem>
 #include "frmAbout.h"
-//#include "Ionic.Zip.dll" // Include the DotNetZip header
-
-
 
 namespace OSmetod {
 
