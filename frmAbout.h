@@ -21,7 +21,7 @@ namespace OSmetod {
 			//
 			//TODO: Add the constructor code here
 			//
-			lblVersion->Text = "����� " + Application::ProductVersion;
+			lblVersion->Text = "version " + Application::ProductVersion;
 		}
 
 	protected:
